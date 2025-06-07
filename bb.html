@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Style Product Listing</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        margin: 30px 0 10px;
+      }
+      .category {
+        padding: 20px;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+      }
+      .card h3 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+      }
+      .card p {
+        color: green;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+      .card button {
+        background: #ff9f00;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+      }
+      .card button:hover {
+        background: #fb641b;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shop by Category</h1>
+
+    <!-- Electronics Category -->
+    <div class="category">
+      <h2>Electronics</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Phone" />
+          <h3>Smartphone</h3>
+          <p>$299</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Laptop" />
+          <h3>Laptop</h3>
+          <p>$799</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Camera" />
+          <h3>DSLR Camera</h3>
+          <p>$499</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Watch" />
+          <h3>Smart Watch</h3>
+          <p>$199</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Tablet" />
+          <h3>Tablet</h3>
+          <p>$149</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Headphones" />
+          <h3>Headphones</h3>
+          <p>$99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Speakers" />
+          <h3>Bluetooth Speakers</h3>
+          <p>$59</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=TV" />
+          <h3>LED TV</h3>
+          <p>$999</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Mouse" />
+          <h3>Wireless Mouse</h3>
+          <p>$25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Keyboard" />
+          <h3>Gaming Keyboard</h3>
+          <p>$45</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- 10 more electronics products can be added here -->
+      </div>
+    </div>
+
+    <!-- Fashion Category -->
+    <div class="category">
+      <h2>Fashion</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=T-Shirt" />
+          <h3>Casual T-Shirt</h3>
+          <p>$25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Jeans" />
+          <h3>Denim Jeans</h3>
+          <p>$45</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Sneakers" />
+          <h3>Running Sneakers</h3>
+          <p>$65</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Dress" />
+          <h3>Summer Dress</h3>
+          <p>$55</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Jacket" />
+          <h3>Leather Jacket</h3>
+          <p>$100</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- 15 more fashion products can be added here -->
+      </div>
+    </div>
+
+    <!-- Home & Kitchen Category -->
+    <div class="category">
+      <h2>Home & Kitchen</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Blender" />
+          <h3>Blender</h3>
+          <p>$49</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Coffee Maker" />
+          <h3>Coffee Maker</h3>
+          <p>$89</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Microwave" />
+          <h3>Microwave Oven</h3>
+          <p>$199</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Air Fryer" />
+          <h3>Air Fryer</h3>
+          <p>$159</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Toaster" />
+          <h3>Toaster</h3>
+          <p>$39</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- 15 more home products can be added here -->
+      </div>
+    </div>
+
+    <!-- Beauty Category -->
+    <div class="category">
+      <h2>Beauty</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Lipstick" />
+          <h3>Matte Lipstick</h3>
+          <p>$15</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Perfume" />
+          <h3>Luxury Perfume</h3>
+          <p>$89</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Shampoo" />
+          <h3>Shampoo</h3>
+          <p>$9</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Face Cream" />
+          <h3>Face Cream</h3>
+          <p>$30</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Nail Polish" />
+          <h3>Nail Polish</h3>
+          <p>$7</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- 20 more beauty products can be added here -->
+      </div>
+    </div>
+
+    <!-- Sports & Fitness Category -->
+    <div class="category">
+      <h2>Sports & Fitness</h2>
+      <div class="products">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Yoga Mat" />
+          <h3>Yoga Mat</h3>
+          <p>$25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Dumbbells" />
+          <h3>Adjustable Dumbbells</h3>
+          <p>$45</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Running Shoes" />
+          <h3>Running Shoes</h3>
+          <p>$75</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Basketball" />
+          <h3>Basketball</h3>
+          <p>$19</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x150?text=Tennis Racket" />
+          <h3>Tennis Racket</h3>
+          <p>$129</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- 20 more fitness products can be added here -->
+      </div>
+    </div>
+  </body>
+</html>

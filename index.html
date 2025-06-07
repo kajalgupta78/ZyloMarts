@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+    <title>ZyloMart ecom website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        margin: 30px 0 10px;
+      }
+      .category {
+        padding: 20px;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .card {
+        background:  #ccffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+      }
+      .card h3 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+      }
+      .card p {
+        color: green;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+      .card button {
+        background: #ff9f00;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+      }
+      .card button:hover {
+        background: #fb641b;
+      }
+    </style>
+</head>
+<body>
+  
+    <!-- Navbar Here -->
+
+ <!--Header Start-->
+  <header class="header">
+    <a href="#"><div id="logo"></div></a>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#ourprouduct">Our Product</a>
+      <a href="#page">New leates</a>
+
+        <a href="#newt">New Trading</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="icons">
+      <div class="fa fa-bars" id="manu-btn"></div>
+      <a href="./search.html">   <div class="fa fa-search" id="search-btn"></div></a>
+   
+      <div class="fa fa-shopping-cart" id="shopping-btn"></div>
+      <a href="./login.html">    <div class="fa fa-user" id="user-btn"></div></a>
+  
+    </div>
+
+
+    
+  
+    
+  
+<!--Shopping Cart End-->
+
+
+
+  </header>
+  <!--Header End-->
+<!--Section Here-->
+<main>
+    <section class="hero" id="home">
+       <div class="hero-content flex container">
+            <div>
+                <h3>Summer Fashion</h3>
+                <h1>New Collection</h1>
+                <h4>Big Sale of this week up to <span>30%</span></h4>
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </section>
+    <!--Section end-->
+    <section class="section " id="ourprouduct">
+       <div class="container">
+             <h1 class="heading"> our <span>Products</span></h1>
+           >
+
+            <div class="card-container flex wrap">
+                <div class="card">
+                    <img src="./img1.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            Girls t-shirt
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card sale">
+                    <img src="./img.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            baggy jeans
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img1.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            jeans
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img10.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                           pencil
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img12.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            escort
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card sale">
+                    <img src="./img13.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                           
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img13.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            eyeliner
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img14.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                           
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                 <div class="card new">
+                    <img src="./img15.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                 <div class="card new">
+                    <img src="./img16.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+      </div> 
+    </section>
+
+   
+
+
+    <section class="section " id="newt">
+       <div class="container">
+             <h1 class="heading"> Trading <span>Products</span></h1>
+           >
+
+            <div class="card-container flex wrap">
+                <div class="card">
+                    <img src="./img17.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card sale">
+                    <img src="./img18.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img18.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img18.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="./img19.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card sale">
+                    <img src="./img19.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img2.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img20.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                 <div class="card new">
+                    <img src="./img21.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                 <div class="card new">
+                    <img src="./img22.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                             <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+           </div>
+      </div> 
+    </section>
+
+   
+
+    <section class="section">
+        <div class="container">
+                <h1 class="heading">Best<span>Sale</span></h1>
+       
+
+            <div class="card-container flex wrap">
+                <div class="card">
+                    <img src="./img23.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img24.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img24.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                
+
+                <div class="card sale">
+                    <img src="./img25.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                           
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="card-container flex wrap">
+                <div class="card sale">
+                    <img src="./img26.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card new">
+                    <img src="./img27.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <del>$150.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./img27.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                            
+                        </p>
+                        <div class="price">
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                <div class="card sale">
+                    <img src="./img29.jpg">
+                    <div class="card-content">
+                        <p class="title">
+                           
+                        </p>
+                        <div class="price">
+                            <del>$200.00</del>
+                            <span class="amount">$100.00</span>
+                        </div>
+                        <button class="add-to-card">Add to Card</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" >
+        <div class="secondary-bg">
+            <div class="container flex wrap">
+                <div class="box">
+                    <i class="fa-solid fa-truck"></i>
+                    <h5>
+                        <a href="#">Free Shipping</a>
+                    </h5>
+                    <p class="des">free shipping on order over $99</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <h5>
+                        <a href="#">Cash on Delievery</a>
+                    </h5>
+                    <p class="des">The Internet Trend to repeat</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-gift"></i>
+                    <h5>
+                        <a href="#">Gift for all</a>
+                    </h5>
+                    <p class="des">receive gift when subscribe</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-clock"></i>
+                    <h5>
+                        <a href="#">opening All week</a>
+                    </h5>
+                    <p class="des">6.00 am - 7.00 pm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="page">
+        <div class="container">
+           
+                   <h1 class="heading">New <span>Latest</span></h1>
+            <div class="line"></div>
+
+                <div class="blog-container flex wrap">
+                    <div class="blog-box">
+                        <img src="./img30.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading"> 
+                                <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <img src="./img32.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading">
+                               <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <img src="./img33.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading">
+                                <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <img src="./img33.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading"> 
+                                <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <img src="./img4.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading">
+                               <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="blog-box">
+                        <img src="./img5.jpg">
+                        <div class="blog-content">
+                            <h3 class="heading">
+                                <a href="#">New Trend 2025</a>
+                            </h3>
+                            <p class="des">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <a href="#" class="blog-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <section class="section" id="blog">
+        <div class="secondary-bg">
+           <form class="container flex wrap">
+            <h3>Sign up for Send Newsletter</h3>
+            
+            <div class="input-container flex">
+                <input type="email" name="email" id="email" placeholder="Your Email" autocomplete="off">
+                <button>Subscribe</button>
+            </div>
+
+            <div class="social-icons flex">
+                <a href="#" class="media">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="media"> 
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="media">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="#" class="media">
+                    <i class="fa-brands fa-behance"></i>
+                </a>
+                <a href="#" class="media">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+           </form>
+        </div> 
+    </section>
+</main>
+
+
+<!--Footer Here-->
+<footer class="section" id="contact">
+    <div class="footer-container container flex wrap">
+    <ul class="footer-list">
+        <li>
+            <a href="#home" class="footer-link">Home</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">online store</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">blog</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">contact us</a>
+        </li>
+    </ul>
+    <ul class="footer-list">
+        <li>
+            <a href="./login.html" class="footer-link">login/Register</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Your Card</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Wishlist item</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Your Checkout</a>
+        </li>
+    </ul>
+    <ul class="footer-list">
+        <li>
+            <a href="#" class="footer-link">FAQs</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Term Of Service</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="#" class="footer-link">Returns</a>
+        </li>
+    </ul>
+        <ul class="footer-list" id="contact">
+            <li class="footer-logo">
+                <img src="./zylomart.png" alt="logo"> 
+            </li>
+            <li>
+                <p class="detail">ABC City, XYZ Road</p> 
+            </li>
+            <li>
+                <p class="detail">+7654346789</p> 
+            </li>
+            <li>
+                <p class="detail">kajalgupta@gmail.com</p> 
+            </li>
+        </ul>
+    </div>
+            <div class="footer-buttom"> 
+            <p>
+            Copyright &copy;2025 
+            <a href="#" class="footer-link">ZYLOMART.</a>
+            </p>
+        </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

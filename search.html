@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Search - Flipkart Style</title>
+</head>
+<body style="margin:0; font-family: Arial, sans-serif; background-color: #f1f3f6;">
+
+  <div style="background-color:#2874f0; padding:10px 20px; color:white; display:flex; align-items:center;">
+    <h2 style="margin:0; margin-right:20px;">MyShop</h2>
+    <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products, brands and more" 
+      style="width:60%; padding:10px; border:none; border-radius:4px; outline:none;" />
+  </div>
+
+  <div id="productList" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:20px; padding:20px;">
+    <!-- Product cards will be inserted here -->
+  </div>
+
+  <script>
+    const products = [
+      { name: 'iPhone 14', price: '₹79,900', image: 'https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg' },
+      { name: 'Samsung Galaxy S23', price: '₹74,999', image: 'https://m.media-amazon.com/images/I/81M3ef0jv1L._SX679_.jpg' },
+      { name: 'OnePlus 12', price: '₹64,999', image: 'https://m.media-amazon.com/images/I/71hTxnCZm+L._SX679_.jpg' },
+      { name: 'Sony WH-1000XM5 Headphones', price: '₹29,999', image: 'https://m.media-amazon.com/images/I/61vFKy+Mx4L._SX679_.jpg' },
+      { name: 'Dell Inspiron Laptop', price: '₹55,000', image: 'https://m.media-amazon.com/images/I/61XZQXFQeVL._SX679_.jpg' },
+      { name: 'Apple Watch Series 9', price: '₹41,900', image: 'https://m.media-amazon.com/images/I/71F6fsVLR6L._SX679_.jpg' },
+      { name: 'Samsung 4K Smart TV', price: '₹32,999', image: 'https://m.media-amazon.com/images/I/71x244GZVaL._SX679_.jpg' },
+      { name: 'boAt Airdopes 141', price: '₹1,299', image: 'https://m.media-amazon.com/images/I/51HBom8xz+L._SX679_.jpg' },
+      { name: 'Canon EOS 1500D DSLR', price: '₹39,999', image: 'https://m.media-amazon.com/images/I/81R+LN4dRXL._SX679_.jpg' },
+      { name: 'HP Pavilion x360', price: '₹65,999', image: 'https://m.media-amazon.com/images/I/71YfGEg8KHL._SX679_.jpg' },
+      { name: 'Realme Narzo 60', price: '₹17,999', image: 'https://m.media-amazon.com/images/I/81ZV2vNdn0L._SX679_.jpg' },
+      { name: 'MI Smart Band 7', price: '₹3,999', image: 'https://m.media-amazon.com/images/I/61EpRLMh7GL._SX679_.jpg' },
+      { name: 'Logitech MX Master 3 Mouse', price: '₹8,999', image: 'https://m.media-amazon.com/images/I/61JSP2E7csL._SX679_.jpg' },
+      { name: 'Apple MacBook Air M2', price: '₹1,14,900', image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._SX679_.jpg' },
+      { name: 'JBL Flip 5 Speaker', price: '₹7,999', image: 'https://m.media-amazon.com/images/I/71U1tFESz-L._SX679_.jpg' },
+      { name: 'Nike Revolution 6', price: '₹3,695', image: 'https://m.media-amazon.com/images/I/71TgMm6A58L._UX695_.jpg' },
+      { name: 'Adidas Men’s Track Pant', price: '₹2,999', image: 'https://m.media-amazon.com/images/I/61Ef7uEGT+L._UX569_.jpg' },
+      { name: 'Levi’s Men Shirt', price: '₹1,899', image: 'https://m.media-amazon.com/images/I/51WluXz0y+L._UX679_.jpg' },
+      { name: 'Roadster Analog Watch', price: '₹1,499', image: 'https://m.media-amazon.com/images/I/51Z+hMLiPkL._UY679_.jpg' },
+      { name: 'Wildcraft Backpack', price: '₹1,099', image: 'https://m.media-amazon.com/images/I/81bR1vGKLXL._SX679_.jpg' },
+      { name: 'Titan Smart Watch', price: '₹9,999', image: 'https://m.media-amazon.com/images/I/71L57xdnM1L._SX679_.jpg' },
+      { name: 'Asus TUF Gaming F15', price: '₹72,990', image: 'https://m.media-amazon.com/images/I/81YoSuQ6q8L._SX679_.jpg' },
+      { name: 'Samsung Galaxy Tab S8', price: '₹58,999', image: 'https://m.media-amazon.com/images/I/61JRTD63ztL._SX679_.jpg' },
+      { name: 'boAt Rockerz 450', price: '₹1,199', image: 'https://m.media-amazon.com/images/I/61u48FEs4dL._SX679_.jpg' },
+      { name: 'Boult Audio ProBass', price: '₹899', image: 'https://m.media-amazon.com/images/I/61oLmd5YH3L._SX679_.jpg' },
+      { name: 'Fire-Boltt Smartwatch', price: '₹2,499', image: 'https://m.media-amazon.com/images/I/71pNttxZ5QL._SX679_.jpg' },
+      { name: 'Lenovo IdeaPad Slim 5', price: '₹51,990', image: 'https://m.media-amazon.com/images/I/71Lsk50CV0L._SX679_.jpg' },
+      { name: 'Honor X9B 5G', price: '₹25,999', image: 'https://m.media-amazon.com/images/I/712dSmHgG+L._SX679_.jpg' },
+      { name: 'Puma Sports Shoes', price: '₹2,799', image: 'https://m.media-amazon.com/images/I/71N0nXnC5GL._UX695_.jpg' },
+      { name: 'Allen Solly Polo T-Shirt', price: '₹1,299', image: 'https://m.media-amazon.com/images/I/71fGRGcg5aL._UY679_.jpg' },
+      { name: 'Prestige Mixer Grinder', price: '₹2,499', image: 'https://m.media-amazon.com/images/I/71aORiwpZ3L._SX679_.jpg' },
+      { name: 'Philips Trimmer', price: '₹1,199', image: 'https://m.media-amazon.com/images/I/61We4Ekwt1L._SX679_.jpg' },
+      { name: 'Havells Room Heater', price: '₹3,299', image: 'https://m.media-amazon.com/images/I/51lzH+ldKCL._SX679_.jpg' },
+      { name: 'US Polo Men’s Jeans', price: '₹2,199', image: 'https://m.media-amazon.com/images/I/61E29H1c2GL._UX679_.jpg' },
+      { name: 'Noise ColorFit Pulse', price: '₹1,799', image: 'https://m.media-amazon.com/images/I/61uDqVHDz+L._SX679_.jpg' },
+      { name: 'Apple AirPods Pro', price: '₹23,999', image: 'https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg' },
+      { name: 'Redmi Note 13 Pro', price: '₹24,999', image: 'https://m.media-amazon.com/images/I/71Ug+ZLhYdL._SX679_.jpg' },
+      { name: 'Samsung Smart Fridge', price: '₹48,999', image: 'https://m.media-amazon.com/images/I/71bG+FtkcgL._SX679_.jpg' },
+      { name: 'Whirlpool Washing Machine', price: '₹21,999', image: 'https://m.media-amazon.com/images/I/71T1gMz9HlL._SX679_.jpg' },
+      { name: 'Voltas Split AC', price: '₹33,999', image: 'https://m.media-amazon.com/images/I/61BGNjSElDL._SX679_.jpg' },
+      { name: 'Orient Electric Fan', price: '₹1,899', image: 'https://m.media-amazon.com/images/I/51jZg8YeooL._SX679_.jpg' },
+      { name: 'Mi Router 4A', price: '₹999', image: 'https://m.media-amazon.com/images/I/51rBtb4x+dL._SX679_.jpg' },
+      { name: 'Amazon Echo Dot (5th Gen)', price: '₹4,499', image: 'https://m.media-amazon.com/images/I/71cQWYVtcBL._SX679_.jpg' },
+      { name: 'Godrej Security Safe', price: '₹5,999', image: 'https://m.media-amazon.com/images/I/71EFnQErFqL._SX679_.jpg' },
+      { name: 'Lenovo Wireless Keyboard', price: '₹1,299', image: 'https://m.media-amazon.com/images/I/61BQst3bn5L._SX679_.jpg' },
+      { name: 'HP Wireless Printer', price: '₹7,499', image: 'https://m.media-amazon.com/images/I/71KKBW6AekL._SX679_.jpg' },
+      { name: 'SanDisk 128GB Pen Drive', price: '₹799', image: 'https://m.media-amazon.com/images/I/61W0CHkZRdL._SX679_.jpg' },
+      { name: 'Seagate 1TB HDD', price: '₹3,499', image: 'https://m.media-amazon.com/images/I/71xu3ASlGKL._SX679_.jpg' },
+      { name: 'LG 32" LED TV', price: '₹14,999', image: 'https://m.media-amazon.com/images/I/81lspzLA3KL._SX679_.jpg' }
+    ];
+
+    function displayProducts(list) {
+      const productList = document.getElementById("productList");
+      productList.innerHTML = '';
+      list.forEach(p => {
+        const card = `
+          <div style="background:white; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); padding:15px; text-align:center;">
+            <img src="${p.image}" alt="${p.name}" style="width:100%; height:150px; object-fit:contain; margin-bottom:10px;" />
+            <h4 style="margin:10px 0; font-size:16px;">${p.name}</h4>
+            <p style="color:green; font-weight:bold;">${p.price}</p>
+          </div>
+        `;
+        productList.innerHTML += card;
+      });
+    }
+
+    function searchProducts() {
+      const keyword = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = products.filter(p => p.name.toLowerCase().includes(keyword));
+      displayProducts(filtered);
+    }
+
+    // Initial load
+    window.onload = () => displayProducts(products);
+    
+  </script>
+
+</body>
+</html>
